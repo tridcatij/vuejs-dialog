@@ -144,7 +144,3 @@ Vue.use(VuejsDialog, {
 # License
 
 [MIT](http://opensource.org/licenses/MIT)
-
-## Contributing
-
-Let's make it better :)

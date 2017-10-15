@@ -65,10 +65,7 @@ const COMMON = {
         ]
     },
     plugins: [
-        new WebpackNotifierPlugin({alwaysNotify: true}),
-        new WebpackShellPlugin({
-            onBuildExit: ['node src\\docs\\js\\copy-to-docs.js']
-        })
+        new WebpackNotifierPlugin({alwaysNotify: true})
     ],
     watchOptions: {
         aggregateTimeout: 300,
@@ -88,36 +85,6 @@ const COMMON = {
     },
     devtool: '#eval-source-map'
 }
-
-const DOCS = Object.assign({}, COMMON, {
-    name: 'docs',
-    entry: [
-        './src/docs/js/app.js',
-        './src/docs/scss/app.scss'
-    ],
-    output: {
-        path: path.resolve(__dirname, './docs'),
-        filename: "js/app.[name].js",
-    },
-    devServer: {
-        contentBase: path.join(__dirname, "docs"),
-        compress: true,
-        port: 9000
-    },
-    externals: {
-        'vue': 'Vue',
-        'vuejs-dialog': 'VuejsDialog'
-    },
-    plugins: [
-        extractSass,
-        new HtmlWebpackPlugin({
-            hash: true,
-            catch: true,
-            filename: 'index.html',
-            template: 'src/docs/index.html'
-        })
-    ]
-})
 
 const DIST = Object.assign({}, COMMON, {
     name: 'dist',
@@ -151,20 +118,6 @@ if (isProduction) {
         })
     ])
 
-    DOCS.devtool = '#none'
-    DOCS.plugins = (DOCS.plugins || []).concat([
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.UglifyJsPlugin({
-            sourceMap: false,
-            compress: {
-                warnings: false
-            }
-        })
-    ])
 }
 
-module.exports = [DOCS, DIST]
+module.exports = [DIST]
