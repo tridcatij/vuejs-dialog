@@ -1,7 +1,7 @@
 {
-  "name": "vuejs-dialog",
-  "version": "0.4.5",
-  "description": "A lightweight, promise based alert, prompt and confirm dialog",
+  "name": "vuejs-sui-confirmation",
+  "version": "0.0.1",
+  "description": "A lightweight, promise based Semantic UI confirm dialog",
   "main": "dist/vuejs-dialog.min.js",
   "directories": {
     "docs": "docs"
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Godofbrowser/vuejs-dialog.git"
+    "url": "git+ssh://git@github.com/tridcatij/vuejs-dialog.git"
   },
   "keywords": [
     "vue",
@@ -26,18 +26,13 @@
     "alert",
     "simple",
     "loading-dialog",
-    "hard-confirm",
-    "soft-confirm"
+    "semantic-ui",
   ],
   "author": {
-    "name": "Ajeh Emeke",
-    "email": "ajemeke@gmail.com"
+    "name": "Anton Zverev",
+    "email": "antonwise86@gmail.com"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Godofbrowser/vuejs-dialog/issues"
-  },
-  "homepage": "https://github.com/Godofbrowser/vuejs-dialog#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-core": "^6.0.0",

@@ -1,40 +1,15 @@
-# Vuejs Dialog Plugin
-
-> A lightweight, promise based alert, prompt and confirm dialog.
-
-[![npm version](https://badge.fury.io/js/vuejs-dialog.svg)](https://badge.fury.io/js/vuejs-dialog)
-[![Build Status](https://scrutinizer-ci.com/g/Godofbrowser/vuejs-dialog/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Godofbrowser/vuejs-dialog/build-status/master)
-[![Scrutinizer](https://img.shields.io/scrutinizer/g/Godofbrowser/vuejs-dialog.svg?branch=master)](https://scrutinizer-ci.com/g/Godofbrowser/vuejs-dialog/?branch=master)
-[![npm](https://img.shields.io/npm/dt/vuejs-dialog.svg)]()
-
-![Vuejs Dialog Plugin](./src/docs/img/html-enabled.png?raw=true "Vuejs Dialog Plugin example")
-![Vuejs Dialog Plugin](./src/docs/img/demo.gif?raw=true "Vuejs Dialog Plugin usage demo")
+# Semantic UI confirmation modal with Vue 2
 
 
-## Demo
+## Based on
 
 [https://godofbrowser.github.io/vuejs-dialog/](https://godofbrowser.github.io/vuejs-dialog/)
 
 ## Installation
 
-#### HTML
-Include the script:
-
-  ```html
-  // Include vuejs
- <script type="text/javascript" src="./path/to/vue.min.js"></script>
- 
- // Include the vuejs-dialog plugin
- <script type="text/javascript" src="./path/to/vuejs-dialog.min.js"></script>
- 
- <script>
-// Tell Vue to install the plugin.
-window.Vue.use(VuejsDialog)
-</script>
-  ```
 #### NPM
 ```javascript
-// installation via npm 
+// installation via npm
 npm install vuejs-dialog
 
 // import into project
@@ -107,7 +82,7 @@ If you don't pass a message, the global/default message would be used.
 methods: {
     makeAdmin: function() {
         // Do stuffs
-        
+
     },
     doNothing: function() {
         // Do nothing or some other stuffs
@@ -156,11 +131,11 @@ this.$dialog.confirm(message, options)
 // This will be your global configuration
 
 Vue.use(VuejsDialog, {
-    html: true, 
+    html: true,
     loader: true,
     okText: 'Proceed',
     cancelText: 'Cancel',
-    animation: 'bounce', 
+    animation: 'bounce',
 })
 
 // Please note that local configurations will be considered before global configurations.

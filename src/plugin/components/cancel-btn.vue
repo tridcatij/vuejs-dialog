@@ -1,5 +1,5 @@
 <template>
-    <button v-if="enabled" :class="['dg-btn', 'dg-btn--cancel', {'dg-pull-right': options.reverse}]"
+    <button v-if="enabled" :class="['ui', 'button', 'negative']"
             @click.prevent="$emit('click')" ref="btn">
         <slot></slot>
     </button>
