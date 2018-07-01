@@ -1,6 +1,7 @@
 <template>
     <div>
         <transition :name="animation" @after-leave="animationEnded('content')" appear>
+          <div class="ui dimmer modals page transition active">
             <div v-if="show" :class="['ui', 'mini', 'active', 'modal']">
                 <div class="content" v-html="options.message"></div>
                 <div class="actions">
@@ -15,6 +16,7 @@
                     <div class="dg-clear"></div>
                 </div>
             </div>
+          </div>
         </transition>
     </div>
 </template>
