@@ -1,4 +1,4 @@
-# Semantic UI confirmation modal with Vue 2
+# Semantic UI 2.3 confirmation modal with Vue 2
 
 
 ## Based on
