@@ -1,23 +1,23 @@
 <template>
     <div>
+          <div v-if="show" class="ui dimmer modals page transition" :class="['active']">
         <transition :name="animation" @after-leave="animationEnded('content')" appear>
-          <div class="ui dimmer modals page transition active">
-            <div v-if="show" :class="['ui', 'mini', 'active', 'modal']">
+            <div :class="['ui', 'mini', 'active', 'modal']">
                 <div class="content" v-html="options.message"></div>
                 <div class="actions">
                     <button @click="clickLeftBtn()" :is="leftBtnComponent" :loading="loading" :enabled="leftBtnEnabled" :options="options" :focus="leftBtnFocus">
                         <span v-if="options.html" v-html="leftBtnText"></span>
-                        <span v-else="">{{ leftBtnText }}</span>
+                        <span>{{ leftBtnText }}</span>
                     </button>
                     <button :is="rightBtnComponent" @click="clickRightBtn()" :loading="loading" :enabled="rightBtnEnabled" :options="options" :focus="rightBtnFocus">
                         <span v-if="options.html" v-html="rightBtnText"></span>
-                        <span v-else="">{{ rightBtnText }}</span>
+                        <span>{{ rightBtnText }}</span>
                     </button>
                     <div class="dg-clear"></div>
                 </div>
             </div>
-          </div>
         </transition>
+          </div>
     </div>
 </template>
 <script>
